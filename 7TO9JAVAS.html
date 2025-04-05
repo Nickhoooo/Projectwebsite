@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+</head>
+<style>
+
+/*---------------------------EXAMPLE7 ------------------------------*/ 
+.container7{
+  width: auto;
+  height: 200px;
+  background-color: antiquewhite;
+  border: solid;
+  text-align: center;
+}
+/*---------------------------EXAMPLE8 ------------------------------*/ 
+.container8{
+  width: auto;
+  height: 200px;
+  background-color: rgb(107, 81, 46);
+  border: solid;
+  text-align: center;
+}
+/*---------------------------EXAMPLE9 ------------------------------*/ 
+.container9{
+  width: auto;
+  height: 200px;
+  background-color: rgb(194, 144, 78);
+  border: solid;
+  text-align: center;
+}
+
+
+</style>
+
+<body>
+<!----------------------------------EXAMPLE7--------------------------------------->
+  <div class="container7">
+    <h1 style=" font-family: 'Poppins', sans-serif; text-align: center;">EXAMPLE 7</h1>
+    <textarea id="myText" oninput="countChars()" rows="4" cols="30" style="font-family: 'Poppins', sans-serif;"></textarea>
+    <p id="charCount" style="font-family: 'Poppins', sans-serif;">Characters: 0</p>
+  </div>
+
+<!----------------------------------EXAMPLE8--------------------------------------->
+    <div class="container8">
+      <h1 style=" font-family: 'Poppins', sans-serif; text-align: center;">EXAMPLE 8</h1>
+      <input type="text" id="todoInput" placeholder="Enter task" style="border-radius: 20px; height: 20px;">
+      <button onclick="addTask()" style="border-radius: 20px; background-color: aquamarine; width: 50px; height: 20px;">Add</button>
+      <ul id="todoList"></ul>
+    </div>
+<!----------------------------------EXAMPLE9--------------------------------------->
+    <div class="container9">
+      <h1 style=" font-family: 'Poppins', sans-serif; text-align: center;">EXAMPLE 9</h1>
+      <input type="number" id="ageInput" placeholder="Enter your age" style="height: 20px; border-radius: 20px; ">
+    <button onclick="checkAge()" style="background-color: rgb(19, 24, 24); color: white; width: 80px; border-radius: 10px; height: 20px;">Check</button>
+    <p id="ageResult" style="font-family: 'Poppins', sans-serif;"></p>
+    </div>
+
+
+</body>
+
+<script>
+
+  //---------------------------EXAMPLE7-------------------------------------------
+  function countChars() {
+    const text = document.getElementById("myText").value;
+    document.getElementById("charCount").innerText = "Characters: " + text.length;
+  }
+
+ //---------------------------EXAMPLE8-------------------------------------------
+ function addTask() {
+    const input = document.getElementById("todoInput");
+    const li = document.createElement("li");
+    li.innerText = input.value;
+    document.getElementById("todoList").appendChild(li);
+    input.value = ""; // clear input
+  }
+
+  //---------------------------EXAMPLE9-------------------------------------------
+  function checkAge() {
+    const age = document.getElementById("ageInput").value;
+    const result = age >= 18 ? "PWEDE NAAA" : "Wag po bata pa ku";
+    document.getElementById("ageResult").innerText = result;
+  }
+
+</script>
+
+</html>

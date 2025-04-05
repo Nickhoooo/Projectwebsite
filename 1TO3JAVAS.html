@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+</head>
+<style>
+
+/*---------------------------EXAMPLE1 ------------------------------*/ 
+.container1{
+  width: auto;
+  height: 200px;
+  background-color: antiquewhite;
+  border: solid;
+  text-align: center;
+}
+/*---------------------------EXAMPLE2 ------------------------------*/ 
+.container2{
+  width: auto;
+  height: 200px;
+  background-color: rgb(107, 81, 46);
+  border: solid;
+  text-align: center;
+}
+/*---------------------------EXAMPLE3 ------------------------------*/ 
+.container3{
+  width: auto;
+  height: 200px;
+  background-color: rgb(194, 144, 78);
+  border: solid;
+  text-align: center;
+}
+
+
+</style>
+
+<body>
+<!----------------------------------EXAMPLE 1--------------------------------------->
+  <div class="container1">
+    <h1 style=" font-family: 'Poppins', sans-serif; text-align: center;">EXAMPLE 1</h1>
+    <h1 id="greeting" style=" font-family: 'Poppins', sans-serif; color: red; text-align: center;">I LOVE YOU</h1>
+<button onclick="changeText()" style="border-radius: 30px; width: 100px; height: 40px; background-color: rgb(209, 36, 36); color: white; ">Hit me</button>
+  </div>
+
+<!----------------------------------EXAMPLE 2--------------------------------------->
+    <div class="container2">
+      <h1 style=" font-family: 'Poppins', sans-serif; text-align: center;">EXAMPLE 2</h1>
+      <button onclick="changeBgColor()">Change Background</button>
+    </div>
+<!----------------------------------EXAMPLE 3--------------------------------------->
+    <div class="container3">
+      <h1 style=" font-family: 'Poppins', sans-serif; text-align: center;">EXAMPLE 3</h1>
+      <p id="clock" style="font-size: 24px; font-family: 'Poppins', sans-serif;"></p>
+    </div>
+
+
+</body>
+
+<script>
+
+  //---------------------------EXAMPLE1 -------------------------------------------
+  function changeText() {
+    document.getElementById("greeting").innerHTML = "I LOVE YOU TOO ❤️";
+  }
+
+ //---------------------------EXAMPLE2 -------------------------------------------
+ function changeBgColor() {
+    document.querySelector('.container2').style.backgroundColor = "#a1c4fd";
+  }
+  //---------------------------EXAMPLE3 -------------------------------------------
+  function updateClock() {
+    const now = new Date();
+    document.getElementById("clock").innerHTML = now.toLocaleTimeString();
+  }
+  setInterval(updateClock, 1000); 
+</script>
+
+</html>

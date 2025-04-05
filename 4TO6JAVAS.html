@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+</head>
+<style>
+
+/*---------------------------EXAMPLE4 ------------------------------*/ 
+.container4{
+  width: auto;
+  height: 200px;
+  background-color: antiquewhite;
+  border: solid;
+  text-align: center;
+}
+/*---------------------------EXAMPLE5 ------------------------------*/ 
+.container5{
+  width: auto;
+  height: 200px;
+  background-color: rgb(107, 81, 46);
+  border: solid;
+  text-align: center;
+}
+/*---------------------------EXAMPLE6 ------------------------------*/ 
+.container6{
+  width: auto;
+  height: 200px;
+  background-color: rgb(194, 144, 78);
+  border: solid;
+  text-align: center;
+}
+
+#num1{
+    border-radius: 30px;
+    height: 30px;
+}
+#num2{
+    border-radius: 30px;
+    height: 30px;
+}
+
+</style>
+
+<body>
+<!----------------------------------EXAMPLE4--------------------------------------->
+  <div class="container4">
+    <h1 style=" font-family: 'Poppins', sans-serif; text-align: center;">EXAMPLE 4</h1>
+    <input id="num1" type="number" placeholder="Number 1">
+    <input id="num2" type="number" placeholder="Number 2">
+    <button onclick="add()" style="background-color: rgb(114, 114, 133); color: white; width: 100px; height: 30px ; border-radius: 30px;">Add</button>
+    <p id="result" style="font-family: 'Poppins', sans-serif;"></p>
+  </div>
+
+<!----------------------------------EXAMPLE5--------------------------------------->
+    <div class="container5">
+      <h1 style=" font-family: 'Poppins', sans-serif; text-align: center;">EXAMPLE 5</h1>
+      <p id="text" style="font-family: 'Poppins', sans-serif; color: white;">CRUSH PU KITA 🤫</p>
+      <button onclick="toggleText()" style="border-radius: 30px; width: 100px; height: 30px; background-color: rgb(12, 12, 12); color: white;">Hide/Show</button>
+      
+    </div>
+<!----------------------------------EXAMPLE6--------------------------------------->
+    <div class="container6">
+      <h1 style=" font-family: 'Poppins', sans-serif; text-align: center;">EXAMPLE 6</h1>
+      <button onclick="generateNumber()" style="border-radius: 30px; width: 200px; height: 30px;  color: aliceblue; font-family: 'Poppins', sans-serif; background-color: black;">Generate Random Number</button>
+    <p id="randomNum" style="font-family: 'Poppins', sans-serif;"></p>
+    </div>
+</body>
+
+<script>
+
+  //---------------------------EXAMPLE4-------------------------------------------
+  function add() {
+    let a = parseFloat(document.getElementById("num1").value);
+    let b = parseFloat(document.getElementById("num2").value);
+    document.getElementById("result").innerHTML = "Result: " + (a + b);
+  }
+
+ //---------------------------EXAMPLE5-------------------------------------------
+ function toggleText() {
+    const txt = document.getElementById("text");
+    txt.style.display = (txt.style.display === "none") ? "block" : "none";
+  }
+
+  //---------------------------EXAMPLE6-------------------------------------------
+  function generateNumber() {
+    const num = Math.floor(Math.random() * 100) + 1; // 1 to 100
+    document.getElementById("randomNum").innerText = "Random Number: " + num;
+  }
+
+</script>
+
+</html>
